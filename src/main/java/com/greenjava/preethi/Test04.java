@@ -30,6 +30,7 @@ public class Test04 {
         }
 
         for (String s : results) {
+
             Stream<String> lines = Files.lines(Paths.get(path + "/" + s));
             List<String> collect = lines.collect(Collectors.toList());
 
