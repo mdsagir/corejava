@@ -2,15 +2,20 @@ package com.greenjava.stream;
 
 import com.greenjava.lambda.Student;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class FunctionalProgramming {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
         reduce();
 
@@ -33,7 +38,7 @@ public class FunctionalProgramming {
 
     }
 
-    private static void reduce() {
+    private static void reduce() throws IOException {
 
         List<Integer> integers = Arrays.asList(1, 3, 5, 7, 6, 1, 9, 3, 4, 6);
         // custom method reference
@@ -178,6 +183,19 @@ public class FunctionalProgramming {
                 .collect(Collectors.groupingBy(Student::getAddress,
                         Collectors.mapping(Student::getName, Collectors.toList())))
         );
+// replace all
+        strings.replaceAll(str->str.toUpperCase());
+        System.out.println(strings);
+        strings.removeIf(str->str.length()==4);
+        System.out.println(strings);
+// stream files handling
+
+//        Files.lines(Paths.get(""))
+//                .map(s -> s.split(" "))
+//                .flatMap(Arrays::stream)
+//                .distinct()
+//                .sorted()
+//                .forEach(System.out::println);
 
     }
 
