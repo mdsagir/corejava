@@ -70,9 +70,9 @@ public class LambadaIteration {
                         return student.getGradeYear() == 2019;
                     }
                 })
-                .map(new Function<Student, Double>() {
+                .map(new Function<Student, Integer>() {
                     @Override
-                    public Double apply(Student student) {
+                    public Integer apply(Student student) {
                         return student.getScore();
                     }
                 })

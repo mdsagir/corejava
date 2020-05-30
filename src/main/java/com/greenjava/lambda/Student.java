@@ -4,8 +4,27 @@ public class Student {
 
     private int id;
     private String name;
+    private String address;
     private int gradeYear;
-    private double score;
+    private int score;
+
+
+
+    public Student(int id, String name, String address, int gradeYear, int score) {
+        this.id = id;
+        this.name = name;
+        this.address = address;
+        this.gradeYear = gradeYear;
+        this.score = score;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
 
     public int getId() {
         return id;
@@ -31,15 +50,15 @@ public class Student {
         this.gradeYear = gradeYear;
     }
 
-    public double getScore() {
+    public int getScore() {
         return score;
     }
 
-    public void setScore(double score) {
+    public void setScore(int score) {
         this.score = score;
     }
 
-    public Student(int id, String name, int gradeYear, double score) {
+    public Student(int id, String name, int gradeYear, int score) {
         this.id = id;
         this.name = name;
         this.gradeYear = gradeYear;
