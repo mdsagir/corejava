@@ -21,7 +21,7 @@ public class Bank {
         bankAccounts.add(bankAccount1);
         bankAccounts.add(bankAccount2);
 
-        String path = "/Users/sagir/Desktop/filesystem/balance.txt";
+        String path = "src/main/java/com/greenjava/preethi/filesystem/balance.txt";
 
         Stream<String> lines = Files.lines(Paths.get(path));
         List<String> collect = lines.collect(Collectors.toList());
@@ -31,6 +31,8 @@ public class Bank {
                 bankAccounts.get(i).setCurrentBalance(Long.parseLong(collect.get(i)));
         }
         System.out.println(bankAccounts);
+
+        Stream<Integer> iterate = Stream.iterate(0, i -> bankAccounts.size());
 
     }
 

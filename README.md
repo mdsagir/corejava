@@ -160,3 +160,4 @@ Content in the first column | Content in the second column
 ![Alt text](/Users/sagir/Downloads/basic-security/src/main/resources/security_screen.png?raw=true "Optional Title")
 
 ![Alt text](http://Users/sagir/Downloads/basic-security/src/main/resources/security_screen.png "Optional title")
+![ScreenShot](https://raw.github.com/{mdsagir}/{corejava}/{master}/{/Users/sagir/Downloads/basic-security/src/main/resources/security_screen.png})

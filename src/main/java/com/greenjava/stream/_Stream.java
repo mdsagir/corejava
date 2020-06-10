@@ -60,7 +60,7 @@ public class _Stream {
 
         // collectors counting works for the ? type
 
-        students.stream().collect(Collectors.counting());
+        students.size();
 
         // find min max value
 

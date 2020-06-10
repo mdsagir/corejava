@@ -95,7 +95,7 @@ public class _ArrayList {
         System.out.println("Before by byStream " + byStream);
 
         List<Integer> updateByStream = byStream.stream()
-                .filter(i -> i != null)
+                .filter(Objects::nonNull)
                 .collect(Collectors.toList());
 
         System.out.println("After by ByStream " + updateByStream);
@@ -127,16 +127,10 @@ public class _ArrayList {
         List<Integer> integers = new ArrayList<>(Arrays.asList(1, 3, 0, 7));
 
 
-        boolean remove = integers.remove(new Integer(0));
+        boolean remove = integers.remove(Integer.valueOf(0));
         System.out.println(integers);
 
-        Iterator<Integer> iterator = integers.iterator();
-        while (iterator.hasNext()) {
-
-            if (iterator.next() == 7) {
-                iterator.remove();
-            }
-        }
+        integers.removeIf(integer -> integer == 7);
         System.out.println(integers);
 
         for (int i : integers) {

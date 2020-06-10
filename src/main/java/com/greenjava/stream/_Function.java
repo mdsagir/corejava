@@ -13,7 +13,7 @@ public class _Function {
 
 
         List<String> names = Arrays.asList("bob", "josh", "megan");
-        names.replaceAll(s -> s.toUpperCase());
+        names.replaceAll(String::toUpperCase);
 
         List<Student> students = loadStudents();
 

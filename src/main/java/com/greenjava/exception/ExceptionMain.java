@@ -55,9 +55,7 @@ public class ExceptionMain {
                 String message = ((RuntimeException) e).getMessage();
                 throw new MyException("Runtime exception "+message);
             }
-            if (e instanceof IOException){
-                throw new MyException("file not found "+e.getMessage());
-            }
+            throw new MyException("file not found "+e.getMessage());
 
         }
 
